@@ -12,7 +12,7 @@ target_sources(grbl INTERFACE
  ${CMAKE_CURRENT_LIST_DIR}/modbus.c
  ${CMAKE_CURRENT_LIST_DIR}/modbus_rtu.c
  ${CMAKE_CURRENT_LIST_DIR}/motion_control.c
- ${CMAKE_CURRENT_LIST_DIR}/my_plugin.c
+ #${CMAKE_CURRENT_LIST_DIR}/my_plugin.c
  ${CMAKE_CURRENT_LIST_DIR}/nuts_bolts.c
  ${CMAKE_CURRENT_LIST_DIR}/override.c
  ${CMAKE_CURRENT_LIST_DIR}/planner.c
