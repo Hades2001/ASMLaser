@@ -1,0 +1,6 @@
+IDF 4.4 build: PASS
+Startup regression: PASS
+Flash: PASS after stopping conflicting idf_monitor process
+Firmware SHA256: 9c46502175612b8c06b3fc36b11784211a405626b1f254387ff95cd8f9c066cb
+UART boot capture: STBY=1, enable_invert=0; settings accepted; homing status=0 abort=0 state=0 homed=3; T0 ready.
+Physical motion: awaiting user observation.

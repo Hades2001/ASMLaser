@@ -1,0 +1,10 @@
+2026-09-16 STSPIN220 startup fix
+Before fix: test_machine_startup.py failed STBY-high assertion.
+Cause: STBY was driven low again after mode latch.
+After fix: startup GPIO timing / sound regression PASS.
+IDF 4.4 build: PASS
+UART flash and verification: PASS
+SHA256 firmware: 9a22f7af32a6453f58a2cabeda48dd22997c08d4d43ed874e5d3a178daa6e350
+User confirms buzzer works.
+Only QinHeng UART (1a86:55d3) mapped; native CDC absent.
+Physical homing / return: awaiting observation.

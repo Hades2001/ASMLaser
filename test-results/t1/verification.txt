@@ -1,0 +1,9 @@
+Embedded G-Code matches source byte-for-byte: 2507 bytes
+SHA256 G-Code: 395fa5e1b58967d9ecaf05190add145c2f5ea64a02c61eb86b3d182d36327f89
+SHA256 firmware: 2234f6650135ed53c498089096746431eacd99ad6dbba008c330b83af1d6e681
+Offline module host regression: PASS
+STSPIN220 latch / sound host regression: PASS
+IDF 4.4 build and flash: PASS
+2026-09-16 update: user confirms buzzer, motor operation and GPIO36 G-Code trigger normal.
+Native USB CDC: PASS on /dev/ttyACM1 (303a:4001), queries, 10/10 realtime status frames, close/reopen. See usb-cdc.log and usb-cdc-results.json.
+Firmware hash above records the earlier build; current diagnostic firmware is recorded in motor-diagnostic-verification.txt.

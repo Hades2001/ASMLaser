@@ -15,6 +15,8 @@ OPTION(AddMyPlugin "Add my_plugin.c" OFF)
 
 set(SRCS
  main.c
+ t1_offline.c
+ factory_init.c
  driver.c
  nvs.c
  timers.c
@@ -283,6 +285,7 @@ list (APPEND SRCS ${WIFI_SOURCE})
 idf_component_register(SRCS "${SRCS}" INCLUDE_DIRS ".")
 
 target_compile_definitions("${COMPONENT_LIB}" PUBLIC GRBL_ESP32)
+include(${CMAKE_CURRENT_LIST_DIR}/t0_defaults.cmake)
 target_compile_definitions("${COMPONENT_LIB}" PUBLIC LITTLEFS_ENABLE=1)
 target_compile_definitions("${COMPONENT_LIB}" PUBLIC STDIO_FS)
 target_compile_definitions("${COMPONENT_LIB}" PUBLIC LWIP_HTTPD_CUSTOM_FILES=0)
@@ -314,3 +317,7 @@ unset(AddMyPlugin CACHE)
 target_compile_options("${COMPONENT_LIB}" PRIVATE -Wimplicit-fallthrough=1 -Wno-missing-field-initializers -Wno-maybe-uninitialized -Wno-stringop-truncation -Wno-expansion-to-defined)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# Replace this source file and rebuild to change the offline job.
+set(T1_GCODE_FILE "${CMAKE_CURRENT_LIST_DIR}/GCode/HadesLogo.gc" CACHE FILEPATH "Embedded offline G-Code")
+target_add_binary_data("${COMPONENT_LIB}" "${T1_GCODE_FILE}" BINARY RENAME_TO t1_job)

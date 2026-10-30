@@ -1,0 +1,11 @@
+CompileFlags:
+  CompilationDatabase: build
+  Add:
+    - -Wno-unknown-warning-option
+  Remove:
+    - -mlongcalls
+    - -mtext-section-literals
+    - -fstrict-volatile-bitfields
+    - -fno-tree-switch-conversion
+    - -fno-jump-tables
+    - -fno-shrink-wrap

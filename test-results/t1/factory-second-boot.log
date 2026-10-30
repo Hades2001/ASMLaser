@@ -1,0 +1,38 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3808,len:0x1348
+load:0x403c9700,len:0xb90
+load:0x403cc700,len:0x2ecc
+entry 0x403c993c
+[0;32mI (24) boot: ESP-IDF v4.4.6-502-g6897e4e0fa-dirty 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time 23:26:55[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v0.2[0m
+[0;32mI (32) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 grbl             Unknown data     01 99 00210000 00001000[0m
+[0;32mI (93) boot:  4 storage          Unknown data     01 82 00211000 000f0000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (105) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=10bd0h ( 68560) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=00020bf8 vaddr=3fc92fb0 size=028d8h ( 10456) load[0m
+[0;32mI (128) esp_image: segment 2: paddr=000234d8 vaddr=40374000 size=0cb40h ( 52032) load[0m
+[0;32mI (143) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4f4d0h (324816) map[0m
+[0;32mI (201) esp_image: segment 4: paddr=0007f4f8 vaddr=40380b40 size=02468h (  9320) load[0m
+[0;32mI (214) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (215) boot: Disabling RNG early entropy source...[0m
+FACTORY: already initialized; preserving settings
+T0 boot: STBY=1 EN=0 enable_invert=0 state=1
+T0 fan finished: completed=1 abort=0
+T0 homing start: STBY=1 EN=0 XLimit=1 YLimit=1
+T0 homing end: status=0 abort=0 state=0 homed=3 STBY=1 EN=0
+T0 ready: XY work origin set

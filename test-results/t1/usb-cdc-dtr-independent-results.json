@@ -1,0 +1,15 @@
+{
+  "'?'": true,
+  "'$I\\n'": true,
+  "'$T1\\n'": true,
+  "'$G\\n'": true,
+  "'$#\\n'": true,
+  "'$$\\n'": true,
+  "DTR=True RTS=True response": true,
+  "DTR=False RTS=False response": true,
+  "DTR=False RTS=True response": true,
+  "DTR=True RTS=False response": true,
+  "ending '\\r'": true,
+  "ending '\\r\\n'": true,
+  "poll10": true
+}

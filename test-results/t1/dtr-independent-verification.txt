@@ -1,0 +1,10 @@
+Final firmware SHA256: 5098c65902340b2d76369f81ce4c346b551631f1542086b9f122fbf1654bfb7b
+IDF 4.4 build and UART flash: PASS
+Host tests/test_usb_tx_stall.py: PASS (first-input gate, no-reader timeout, disconnect, TX progress, abort)
+Full reboot with no CDC application open: homing and G92 PASS, see dtr-independent-boot.log
+First connection with DTR=false: all queries PASS
+All four DTR/RTS combinations: PASS
+CR/LF/CRLF: PASS
+10 consecutive status queries: PASS
+Intermediate firmware had first-query error:1 after reset; final firmware waits for first RX before transmitting boot text and full reboot retest passed. Earlier observation retained in usb-cdc-dtr-first-connect.log.
+Ports closed after testing.

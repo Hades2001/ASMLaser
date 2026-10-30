@@ -39,6 +39,7 @@
 #include "esp_private/usb_phy.h"
 #include "esp_rom_sys.h"
 #include "esp_system.h"
+#include "esp_timer.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/semphr.h"
 #include "freertos/task.h"
@@ -65,6 +66,7 @@ static stream_block_tx_buffer_t txbuf = {0};
 static stream_rx_buffer_t rxbuf;
 static volatile enqueue_realtime_command_ptr enqueue_realtime_command = protocol_enqueue_realtime_command;
 static bool usb_serial_started = false;
+static bool usb_rx_seen = false;
 static bool usb_bootloader_restart_pending = false;
 static usb_phy_handle_t usb_serial_phy_hdl = NULL;
 
@@ -160,12 +162,14 @@ static inline bool usb_connected (void)
 
 static bool usb_is_connected(void)
 {
-    return tud_cdc_n_connected(0);
+    // CDC line-state bits are optional for Grbl hosts (including LightBurn).
+    // Use USB configuration/suspend state, independent of DTR and RTS.
+    return usb_connected();
 }
 
 static void usb_out_chars (const uint8_t *buf, int length)
 {
-    if(usb_connected()) {
+    if(usb_connected() && usb_rx_seen) {
         for(int i = 0; i < length;) {
         	size_t n = length - i;
         	uint32_t avail = tud_cdc_n_write_available(TINYUSB_USBDEV_0);
@@ -223,10 +227,18 @@ static void usb_serialRxCancel (void)
 bool _usb_write (void)
 {
     size_t txfree, length;
+    int64_t last_progress = esp_timer_get_time();
 
     txbuf.s = txbuf.data;
 
     while(txbuf.length) {
+        // A configured USB device may have no reader. Bound stalls so startup
+        // and offline execution continue even with a closed host application.
+        if(!usb_is_connected() || !usb_rx_seen || esp_timer_get_time() - last_progress >= 100000) {
+            txbuf.length = 0;
+            txbuf.s = txbuf.data;
+            return false;
+        }
 
         if((txfree = tud_cdc_write_available()) > 10) {
 
@@ -236,6 +248,7 @@ bool _usb_write (void)
 
             txbuf.length -= length;
             txbuf.s += length;
+            last_progress = esp_timer_get_time();
         }
 
         if(txbuf.length && !hal.stream_blocking_callback()) {
@@ -350,6 +363,11 @@ static void usb_rx_callback (int itf, cdcacm_event_t *event)
 	free = (int32_t)usb_serialRxFree();
 	free = free > CONFIG_TINYUSB_CDC_RX_BUFSIZE ? CONFIG_TINYUSB_CDC_RX_BUFSIZE : free;
 	if(tinyusb_cdcacm_read(itf, tmpbuf, free, &avail) == ESP_OK) {
+        // Wait for host input before the first transmission after boot. This
+        // avoids unsolicited boot text being echoed back by a newly enumerated
+        // OS tty before the application has configured it for raw serial I/O.
+        if(avail)
+            usb_rx_seen = true;
         if(avail > 0) while(avail--) {
             c = *dp++;
             if(!enqueue_realtime_command(c)) {

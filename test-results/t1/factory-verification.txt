@@ -1,0 +1,10 @@
+Final firmware SHA256: 7fb99321909af8aea31e748bd0f47efd428c62b52a5f7bee13654e793c577022
+IDF 4.4 build and flash: PASS
+Factory initialization fault injection host tests: PASS
+3s tone timing and abort cleanup host test: PASS
+Physical initial parameter write/readback: PASS
+89 Grbl settings and empty startup lines match captured source after initialization: PASS
+Second hardware reset: marker detected, initialization skipped, homing/G92 complete: PASS
+89 settings after second reset: PASS
+Acoustic duration has not been measured with external instrumentation.
+Ports closed after tests.

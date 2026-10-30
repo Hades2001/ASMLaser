@@ -1,0 +1,315 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x2b (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3808,len:0x1348
+load:0x403c9700,len:0xb90
+load:0x403cc700,len:0x2ecc
+entry 0x403c993c
+[0;32mI (24) boot: ESP-IDF v4.4.6-502-g6897e4e0fa-dirty 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time 23:26:55[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v0.2[0m
+[0;32mI (32) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (85) boot:  3 grbl             Unknown data     01 99 00210000 00001000[0m
+[0;32mI (93) boot:  4 storage          Unknown data     01 82 00211000 000f0000[0m
+[0;32mI (100) boot: End of partition table[0m
+[0;32mI (105) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=0eb60h ( 60256) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=0001eb88 vaddr=3fc928f0 size=01490h (  5264) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=47e8ch (294540) map[0m
+[0;32mI (183) esp_image: segment 3: paddr=00067eb4 vaddr=3fc93d80 size=01384h (  4996) load[0m
+[0;32mI (184) esp_image: segment 4: paddr=00069240 vaddr=40374000 size=0e8e4h ( 59620) load[0m
+[0;32mI (207) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (207) boot: Disabling RNG early entropy source...[0m
+��
+GrblHAL 1.1f ['$' or '$HELP' for help]
+ALARM:11
+[MSG:Homing cycle required]
+[MSG:T0 fan check on]
+[MSG:T0 fan check off]
+[MSG:T0 blocked: check fan GPIO, microsteps, XY settings and empty $N lines]
+>>> 
+ok
+BEFORE SETTINGS
+>>> $$
+$0=2.0
+$1=50
+$2=0
+$3=3
+$4=0
+$5=3
+$6=0
+$9=1
+$10=511
+$11=0.010
+$12=0.002
+$13=0
+$14=0
+$15=0
+$16=0
+$17=0
+$18=0
+$19=0
+$20=0
+$21=1
+$22=1029
+$23=0
+$24=25.0
+$25=100.0
+$26=250
+$27=1.000
+$28=0.100
+$29=0.0
+$30=1000.000
+$31=0.000
+$32=1
+$33=5000.0
+$34=0.0
+$35=0.0
+$36=100.0
+$37=0
+$39=1
+$40=0
+$41=0
+$42=2
+$43=1
+$44=3
+$45=0
+$46=0
+$56=5.0
+$57=100.0
+$58=-5.0
+$59=500.0
+$60=0
+$61=0
+$62=0
+$63=3
+$64=0
+$65=0
+$100=1706.66662
+$101=1706.66662
+$102=250.00000
+$110=3000.000
+$111=3000.000
+$112=500.000
+$120=30.000
+$121=30.000
+$122=10.000
+$130=45.000
+$131=45.000
+$132=200.000
+$341=0
+$342=30.0
+$343=25.0
+$344=200.0
+$345=200.0
+$346=1
+$370=0
+$372=0
+$384=0
+$392=4.0
+$393=1.0
+$394=0.0
+$398=100
+$481=0
+$484=1
+$485=0
+$486=0
+$539=0.0
+$650=0
+$673=0.0
+$676=15
+$680=0
+$700=0
+ok
+>>> $24=1500
+ok
+>>> $25=1500
+ok
+>>> $130=42
+ok
+>>> $131=42
+ok
+[MSG:Warning: Rebooting controller, communication may be lost]
+��ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x2b (SPI_FAST_FLASH_BOOT)
+Saved PC:0x420468fe
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3808,len:0x1348
+load:0x403c9700,len:0xb90
+load:0x403cc700,len:0x2ecc
+entry 0x403c993c
+[0;32mI (29) boot: ESP-IDF v4.4.6-502-g6897e4e0fa-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time 23:26:55[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v0.2[0m
+[0;32mI (37) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (42) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (67) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (75) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (82) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (90) boot:  3 grbl             Unknown data     01 99 00210000 00001000[0m
+[0;32mI (97) boot:  4 storage          Unknown data     01 82 00211000 000f0000[0m
+[0;32mI (105) boot: End of partition table[0m
+[0;32mI (109) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=0eb60h ( 60256) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0001eb88 vaddr=3fc928f0 size=01490h (  5264) load[0m
+[0;32mI (130) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=47e8ch (294540) map[0m
+[0;32mI (188) esp_image: segment 3: paddr=00067eb4 vaddr=3fc93d80 size=01384h (  4996) load[0m
+[0;32mI (189) esp_image: segment 4: paddr=00069240 vaddr=40374000 size=0e8e4h ( 59620) load[0m
+[0;32mI (212) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (212) boot: Disabling RNG early entropy source...[0m
+��
+GrblHAL 1.1f ['$' or '$HELP' for help]
+ALARM:11
+[MSG:Homing cycle required]
+[MSG:T0 fan check on]
+[MSG:T0 fan check off]
+[MSG:T0 homing XY]
+<Home|MPos:0.000,0.000,0.000|Bf:100,1023|FS:0,0|Pn:P|Ov:100,100,100|A:|TLR:0>
+<Home|MPos:-1.000,-1.000,0.000|Bf:100,1023|FS:0,0|Pn:P|WCO:-45.000,-45.000,0.000>
+[MSG:]
+<Run|MPos:-2.048,-2.048,0.000|Bf:99,1023|FS:890,0|Pn:P|H:1>
+<Run|MPos:-9.331,-9.331,0.000|Bf:99,1023|FS:1500,0|Pn:P>
+<Run|MPos:-18.199,-18.199,0.000|Bf:99,1023|FS:1500,0|Pn:P>
+<Run|MPos:-27.060,-27.060,0.000|Bf:99,1023|FS:1500,0|Pn:P>
+<Run|MPos:-35.927,-35.927,0.000|Bf:99,1023|FS:1396,0|Pn:P>
+<Run|MPos:-41.721,-41.721,0.000|Bf:99,1023|FS:123,0|Pn:P>
+[MSG:T0 ready: XY work origin set]
+Startup elapsed: 8.69s
+Observed fan-check interval: 1.003s
+>>> $#
+[G54:0.000,0.000,0.000]
+[G55:0.000,0.000,0.000]
+[G56:0.000,0.000,0.000]
+[G57:0.000,0.000,0.000]
+[G58:0.000,0.000,0.000]
+[G59:0.000,0.000,0.000]
+[G59.1:0.000,0.000,0.000]
+[G59.2:0.000,0.000,0.000]
+[G59.3:0.000,0.000,0.000]
+[G28:0.000,0.000,0.000]
+[G30:0.000,0.000,0.000]
+[G92:-42.000,-42.000,0.000]
+[HOME:-1.000,-1.000,0.000:3]
+[TLO:0.000,0.000,0.000]
+[PRB:0.000,0.000,0.000:0]
+ok
+>>> $G
+[GC:G1 G54 G92 G17 G21 G90 G94 G40 G49 G98 G50 M5 M9 T0 F1500 S0.]
+ok
+>>> $PINSTATE
+[PINSTATE:DIN|Probe|17|NU--|IBED|1]
+[PINSTATE:DIN|P0|18|NU--|IBED|1]
+[PINSTATE:DOUT|Spindle PWM|11|N|I|0]
+[PINSTATE:DOUT|Spindle on|13|N|I|0]
+[PINSTATE:DOUT|P0|14|N|I|0]
+[PINSTATE:DOUT|Laser fan|37|N|I|0]
+ok
+>>> $$
+$0=2.0
+$1=50
+$2=0
+$3=3
+$4=0
+$5=3
+$6=0
+$9=1
+$10=511
+$11=0.010
+$12=0.002
+$13=0
+$14=0
+$15=0
+$16=0
+$17=0
+$18=0
+$19=0
+$20=0
+$21=1
+$22=1029
+$23=0
+$24=1500.0
+$25=1500.0
+$26=250
+$27=1.000
+$28=0.100
+$29=0.0
+$30=1000.000
+$31=0.000
+$32=1
+$33=5000.0
+$34=0.0
+$35=0.0
+$36=100.0
+$37=0
+$39=1
+$40=0
+$41=0
+$42=2
+$43=1
+$44=3
+$45=0
+$46=0
+$56=5.0
+$57=100.0
+$58=-5.0
+$59=500.0
+$60=0
+$61=0
+$62=0
+$63=3
+$64=0
+$65=0
+$100=1706.66662
+$101=1706.66662
+$102=250.00000
+$110=3000.000
+$111=3000.000
+$112=500.000
+$120=30.000
+$121=30.000
+$122=10.000
+$130=42.000
+$131=42.000
+$132=200.000
+$341=0
+$342=30.0
+$343=25.0
+$344=200.0
+$345=200.0
+$346=1
+$370=0
+$372=0
+$384=0
+$392=4.0
+$393=1.0
+$394=0.0
+$398=100
+$481=0
+$484=1
+$485=0
+$486=0
+$539=0.0
+$650=0
+$673=0.0
+$676=15
+$680=0
+$700=0
+ok
+<Idle|MPos:-42.000,-42.000,0.000|Bf:100,1023|FS:0,0|Pn:P|WCO:-42.000,-42.000,0.000|H:1>
+PASS: 1s fan check, 1500mm/min calibration, XY 42mm, G92 zero, outputs off.

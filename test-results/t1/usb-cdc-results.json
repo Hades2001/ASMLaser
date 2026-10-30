@@ -1,0 +1,11 @@
+{
+  "initial_status": true,
+  "$I": true,
+  "$T1": true,
+  "$G": true,
+  "$#": true,
+  "$$": true,
+  "realtime_10_of_10": true,
+  "reopen_status": true,
+  "reopen_command": true
+}

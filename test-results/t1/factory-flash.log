@@ -1,0 +1,49 @@
+esptool.py esp32s3 -p /dev/ttyACM0 -b 460800 --before default_reset --after no_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 16MB 0x0 bootloader/bootloader.bin 0x10000 grbl.bin 0x8000 partition_table/partition-table.bin
+esptool.py v3.3.4-dev
+Serial port /dev/ttyACM0
+Connecting....
+Chip is ESP32-S3 (revision v0.2)
+Features: WiFi, BLE
+Crystal is 40MHz
+MAC: 68:ee:8f:e9:c7:30
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00004fff...
+Flash will be erased from 0x00010000 to 0x00081fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 19968 bytes to 12683...
+Writing at 0x00000000... (100 %)
+Wrote 19968 bytes (12683 compressed) at 0x00000000 in 0.6 seconds (effective 269.3 kbit/s)...
+Hash of data verified.
+Compressed 465296 bytes to 282665...
+Writing at 0x00010000... (5 %)
+Writing at 0x0001a252... (11 %)
+Writing at 0x00025360... (16 %)
+Writing at 0x0002af0c... (22 %)
+Writing at 0x00031338... (27 %)
+Writing at 0x00036ea3... (33 %)
+Writing at 0x0003c360... (38 %)
+Writing at 0x000419ca... (44 %)
+Writing at 0x00047680... (50 %)
+Writing at 0x0004cdff... (55 %)
+Writing at 0x000527fd... (61 %)
+Writing at 0x00058129... (66 %)
+Writing at 0x0005d4fc... (72 %)
+Writing at 0x00063cbe... (77 %)
+Writing at 0x00069a41... (83 %)
+Writing at 0x0006fa78... (88 %)
+Writing at 0x000781db... (94 %)
+Writing at 0x0007fcf5... (100 %)
+Wrote 465296 bytes (282665 compressed) at 0x00010000 in 6.4 seconds (effective 583.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 133...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (133 compressed) at 0x00008000 in 0.0 seconds (effective 667.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Staying in bootloader.

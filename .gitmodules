@@ -1,6 +1,6 @@
 [submodule "main/grbl"]
 	path = main/grbl
-	url = https://github.com/grblHAL/core
+	url = https://github.com/Hades2001/ASMLaser.git
 [submodule "main/eeprom"]
 	path = main/eeprom
 	url = https://github.com/grblHAL/Plugin_EEPROM
